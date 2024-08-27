@@ -29,6 +29,8 @@ mob_scene = ExtResource("2_1ks4w")
 
 [node name="Ground" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape" type="CollisionShape3D" parent="Ground"]
 shape = SubResource("BoxShape3D_jm4c0")
@@ -71,6 +73,7 @@ visible = false
 mesh = SubResource("CylinderMesh_b6dyb")
 
 [node name="SpawnPath" type="Path3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
 curve = SubResource("Curve3D_kv5q2")
 
 [node name="SpawnLocation" type="PathFollow3D" parent="SpawnPath"]
